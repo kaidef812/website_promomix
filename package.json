@@ -1,0 +1,22 @@
+{
+  "name": "website_promomix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shirudzaki/website_promomix.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shirudzaki/website_promomix/issues"
+  },
+  "homepage": "https://github.com/Shirudzaki/website_promomix#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
