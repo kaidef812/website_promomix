@@ -1,6 +1,9 @@
 @import "mixins";
 @import "fonts";
 @import "reset";
+@import "text-styles";
+
+@import "header";
 
 .container{
     max-width: 1200px;
@@ -9,5 +12,5 @@
 }
 
 .main {
-    background: black;
+    
 }
