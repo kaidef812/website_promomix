@@ -3,14 +3,52 @@
 @import "reset";
 @import "text-styles";
 
-@import "header";
+@import "header-block";
+@import "footer-block";
+@import "tagline-block";
 
 .container{
     max-width: 1200px;
-
     margin: 0 auto;
+
+    @include laptop{
+        width: calc(100% - 150px);
+    }
 }
 
-.main {
-    
+.main{
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    &__link {
+        padding-bottom: 18px;
+        line-height: 100%;
+        width: 175px;
+    }
+}
+
+.social-links {
+    font-family: 'TTNorms-Regular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    &__link {
+        padding: 0px 16px;
+    }
+}
+
+
+.gray-block {
+    background-color: #F2F4F7;
+    max-width: 100%;
+    margin-left: 100px;
+    padding-right: 100px;
+    @include small-desktop {
+        margin-left: 0;
+        padding-right: 0;
+    }
 }
