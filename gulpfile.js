@@ -122,6 +122,7 @@ function fonts() {
     return src(path.src.fonts)
         .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts))
+        .pipe(browsersync.stream())
 }
 
 gulp.task('otf2ttf', function () {
@@ -168,7 +169,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(images, js, css, html, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;

@@ -1,0 +1,61 @@
+.services-nav-menu-block {
+    width: 100%;
+}
+.services-nav-menu {
+    margin: 50px 0px 100px 0px;
+
+		&__cards-row {    
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+		&__card {
+            width: 150px;
+            height: 150px;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.15s;
+
+            &:hover {
+                background-color: $color-6;
+                    path {
+                        fill: #ffffff;
+                    }
+
+                    p {
+                        color: #ffffff;
+                    }
+            }
+        }
+
+		&__logo {
+            width: 32px;
+            height: 32px;
+            svg {
+                margin-left: 7px;
+
+                path {
+                    transition: fill 0.15s;
+                }
+            }
+        }
+
+		&__description {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 150%;
+
+            padding-top: 33px;
+            width: min-content;
+
+            p {
+                transition: color 0.15s;
+            }
+        }
+}

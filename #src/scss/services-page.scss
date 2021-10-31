@@ -1,0 +1,97 @@
+.services-page-block {
+    width: 100%;
+    margin-top: 100px;
+}
+.services-page {
+    display: flex;
+
+		&__header {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 120%;
+        }
+
+		&__services-list {}
+
+		&__service {
+            display: flex;
+            justify-content: space-between;
+            margin: 150px 0px;
+        }
+
+		&__left-column {
+        }
+
+        &__card {
+            display: flex;
+            width: 450px;
+            padding: 35px;
+            cursor: pointer;
+
+            text-align: left;
+
+            transition: background-color 0.15s;
+
+            &:hover {
+                background-color: $color-6;
+
+                svg path {
+                    fill: #ffffff;
+                }
+
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+
+		&__logo {            
+            svg path {
+                transition: fill 0.15s;
+            }
+        }
+
+		&__name {
+            margin-left: 40px;
+            width: min-content;
+
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 130%;
+
+            p {
+                transition: color 0.15s;
+            }
+        }
+
+		&__right-column {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+		&__sub-services-list {
+            display: flex;
+            justify-content: space-between;
+
+            border-top: 1px solid $color-3;
+            padding-top: 40px;
+
+            li {
+                margin-bottom: 26px;
+                font-family: 'TTNorms-Regular';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+            }
+        }
+
+		&__list-left-column {}
+
+		&__list-right-column {}
+}

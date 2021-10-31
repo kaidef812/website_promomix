@@ -1,11 +1,38 @@
+$color-1: #1F2C37;
+$color-2: #5D626A;
+$color-3: #B0B6BF;
+$color-4: #F2F4F7;
+$color-5: #FFFFFF;
+$color-6: #E52322;
+$color-7: #F2353F;
+
 @import "mixins";
 @import "fonts";
 @import "reset";
-@import "text-styles";
 
-@import "header-block";
-@import "footer-block";
-@import "tagline-block";
+@import "header";
+@import "footer";
+
+@import "header-theme";
+@import "services-nav-menu";
+@import "service-subservices";
+@import "application";
+
+@import "home_page/home-page";
+@import "about_page/about-page";
+@import "services-page";
+@import "works-page";
+@import "service-page";
+@import "solutions-page";
+@import "contacts-page";
+
+body {
+    width: 100%;
+}
+
+._lock {
+    overflow: hidden;  
+}
 
 .container{
     max-width: 1200px;
@@ -16,39 +43,197 @@
     }
 }
 
-.main{
+.gray-block {
+    max-width: 100%;
+    width: 100%;
+    background: $color-4;
+
+    @include desktop {
+        max-width: calc(100% - 100px);
+        margin-left: 100px;
+        padding-right: 100px;
+    }
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
+.button-leave-request {
+    text-transform: uppercase;
+    font-family: 'TTNorms-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+
+.button-leave-request:hover {
+    color: $color-7;
+}
+
+.button-submit-big {
+    text-transform: uppercase;
+    font-family: 'TTNorms-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    background: none;
+    border: 1px solid $color-7;
+    padding: 22px 60px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    transition: color 0.15s;
+}
+
+.button-submit-big:hover {
+    background-color: $color-7;
+    color: $color-5;
+}
+
+.navigation-menu {
+    width: max-content;
+
+    &__list {}
+
+    &__item {
+        padding: 9px 0px;
+    }
+
     &__link {
-        padding-bottom: 18px;
+        font-family: 'TTNorms-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
         line-height: 100%;
-        width: 175px;
+        transition: color 0.15s, margin 0.15s;
+    }
+
+    
+    &__link:hover {
+        color: $color-6;
+        margin-left: 10px;
     }
 }
 
 .social-links {
-    font-family: 'TTNorms-Regular';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%; 
+
+    &__list {}
+
+    &__item {
+        display: inline;
+    }
+
+    &__link {
+        font-family: 'TTNorms-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        padding: 0px 16px;
+        transition: color 0.15s;
+    }
+}
+
+.header-section {
+    margin: 100px 0px;
+    
+    &__sub-header {
+        font-family: 'TTNorms-Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0.05em;
+        color: $color-3;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        p {
+            color: $color-3;
+        }
+    }
+    
+    &__header {
+        width: max-content;
+        font-family: 'TTNorms-Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 37px;
+        line-height: 120%;
+    }
+}
+
+.header-horizontal {
     display: flex;
     justify-content: space-between;
-    &__link {
-        padding: 0px 16px;
+        &__header {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 120%;
+        }
+        
+        &__sub-header {
+            width: 570px;
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+        }
+}
+
+.cards-services {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding: 41px 145px 41px 40px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+
+            svg path {
+                transition: fill 0.15s;
+            }
+
+            p {
+                transition: color 0.15s;
+            }
+        }
+
+        &__image {
+            margin-left: 7px;
+        }
+
+        &__description {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 130%;
+
+            padding-top: 53px;
+        }
+
+        &__card:hover {
+            background-color: $color-6;
+        
+                .cards-services__image path {
+                    fill: #ffffff;
+                }
+                .cards-services__description p {
+                    color: #ffffff;
+                }
+        }
+
+    @include laptop {
+        justify-content: space-evenly;
     }
 }
 
-
-.gray-block {
-    background-color: #F2F4F7;
-    max-width: 100%;
-    margin-left: 100px;
-    padding-right: 100px;
-    @include small-desktop {
-        margin-left: 0;
-        padding-right: 0;
-    }
-}

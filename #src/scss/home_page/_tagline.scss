@@ -1,0 +1,43 @@
+.tagline-block {
+    width: 100%;
+
+    &__background {
+        background-image: url('../../img/home_page/tagline_img.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        max-width: 100%;
+    
+        @include desktop {
+            max-width: calc(100% - 100px);
+            margin-left: 100px;
+            padding-right: 100px;
+        }
+    }
+}
+.tagline {
+    padding: 30% 0px 50px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        width: 60%;
+        p {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 120%;
+            color: $color-5;
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
+
+#tagline__list li {
+    color: $color-5;
+}

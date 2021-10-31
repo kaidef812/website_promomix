@@ -1,0 +1,84 @@
+.works-block {
+    width: 100%;
+    margin: 200px 0px;
+}
+.works {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+		&__header {}
+
+		&__cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+		&__left-column {}
+
+		&__right-column {}
+}
+.cards-images {
+    display: flex;
+    justify-content: space-between;
+
+    @include laptop {
+        justify-content: center;
+    }
+
+		&__card-wide {
+            margin: 100px 0px;
+        }
+
+		&__card-high {}
+
+		&__logo {
+            background: $color-1;
+            overflow: hidden;
+        }
+
+		&__image {
+            opacity: 1;
+            transition: opacity 124ms linear, transform 124ms linear;
+        }
+
+		&__header {}
+
+		&__name {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            margin: 20px 0px 15px 0px;
+        }
+
+		&__work-type {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 100%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            
+            p {
+                color: $color-3;
+                transition: color 0.15s;
+            }
+        }
+
+        &__card-wide:hover, &__card-high:hover {
+
+            .cards-images__image {
+                opacity: 0.5;
+                transform: scale(1.05);
+            }
+
+            .cards-images__name p {
+                color: $color-6;
+            }
+        }
+}

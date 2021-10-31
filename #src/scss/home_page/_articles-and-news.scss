@@ -1,0 +1,101 @@
+.articles-and-news-block {
+    width: 100%;
+    margin: 100px 0px;
+}
+.articles-and-news {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+		&__header {}
+
+		&__list {
+        }
+}
+.articles-list {
+
+		&__article {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 60px 0px;
+
+            @include tablet {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__article:hover {
+            .articles-list__logo {
+                transform: scale(0.95);
+
+            }
+            .articles-list__image {
+                opacity: 0.5;
+            }
+            .articles-list__header p {
+                color: $color-7;
+            }
+        }
+
+		&__type {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            p {
+                color: $color-3;
+                width: 150px;
+            }
+        }
+
+		&__logo {
+            background: $color-1;
+            transition: transform 124ms linear;
+            height: min-content;
+            
+        }
+        
+		&__image {
+            opacity: 1;
+            transition: opacity 124ms linear;
+        }
+
+		&__description {
+            margin-left: 60px;
+        }
+
+		&__date {
+            margin-bottom: 20px;
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            p {
+                transition: color 0.15s;
+                color: $color-3;
+            }
+        }
+
+		&__header {
+            margin: 10px 0px;
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 130%;
+        }
+
+		&__text {
+            margin: 10px 0px;
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+}

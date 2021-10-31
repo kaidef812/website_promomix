@@ -1,0 +1,51 @@
+.solutions-block {
+    width: 100%;
+}
+.solutions {
+    display: flex;
+    flex-direction: column;
+
+		&__header {
+            margin: 100px 0px 150px 0px;
+        }
+
+		&__cards {
+		}
+}
+.cards-solution {
+	display: flex;
+	flex-direction: column;
+
+		&__card {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 200px;
+		}
+
+		&__image {
+			margin-right: 60px;
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__header {
+			font-family: 'TTNorms-Medium';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 130%;
+			
+			margin: 40px 0px 20px 0px;
+		}
+		
+		&__description {
+			font-family: 'TTNorms-Regular';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 150%;
+		}
+}

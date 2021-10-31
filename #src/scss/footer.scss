@@ -1,0 +1,114 @@
+.footer-block {
+    width: 100%;
+    margin-top: 200px;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            padding: 100px 0px;
+        }
+
+		&__tagline {
+        }
+
+		&__tagline-header {
+            width: 10em;
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 120%;
+        }
+
+        &__leave-request {
+            padding-top: 62px;
+        }
+
+		&__body-menu {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet {
+                width: 40%;
+            }
+        }
+
+		&__menu {
+            @include tablet {
+                display: none;
+            }
+        }
+
+		&__mailing {
+            width: 45%;
+
+            @include tablet {
+                width: 70%;
+            }
+        }
+
+		&__mailing-text {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+		&__mailing-email-submit {
+            display: flex;
+            margin: 65px 0px 0px 0px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #1F2C37;
+        }
+
+        &__mailing-email-submit:hover {
+            .footer__button-mailing-submit {
+                color: $color-6;
+            }
+            .footer__email-field {
+                &::-webkit-input-placeholder {
+                    color: $color-6;
+                }
+            }
+        }
+
+		&__email-field {
+            width: 100%;
+            background: none;
+            border: none;
+
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+
+            &::-webkit-input-placeholder {
+                transition: color 0.15s;
+            }
+        }
+
+		&__button-mailing-submit {
+            border: none;
+            background: none;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.15s;
+        }
+
+		&__info {
+            display: flex;
+            justify-content: space-between;
+            padding: 43px 0px;
+        }
+
+		&__credits {}
+
+		&__social-links {}
+}

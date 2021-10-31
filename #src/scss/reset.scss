@@ -12,17 +12,31 @@ input {
     border: 0;
     border: none;
     outline: none;
+
+    &::-webkit-input-placeholder {
+        color: #1F2C37;
+    }
 }
   
 a {
     text-decoration: none;
     color: inherit;
 }
+
+a:hover {
+    color: $color-6;
+}
   
 li {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 img {
     display: block;
+}
+
+span {
+    color: $color-7;
 }

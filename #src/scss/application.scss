@@ -1,0 +1,82 @@
+.application-block {
+    width: 100%;
+    margin: 200px 0px;
+}
+.application {
+    display: flex;
+    justify-content: space-between;
+
+		&__header {
+            display: flex;
+            flex-direction: column;
+        }
+
+		&__header-text {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 37px;
+            line-height: 120%;
+        }
+
+		&__description {
+            margin-top: 35px;
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+
+            p {
+                width: 50%;
+            }
+        }
+
+		&__form {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        &__name, &__phone, &__comment {
+            font-family: 'TTNorms-Reluar';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            margin-bottom: 47px;
+            border-bottom: 1px solid $color-3;
+            padding-bottom: 15px;
+        }
+
+		&__name {}
+
+		&__phone {}
+
+		&__comment {}
+
+		&__submit {
+            
+            form {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+		&__button-submit {}
+
+		&__submit-description {
+            width: 50%;
+            font-family: 'TTNorms-Reluar';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 100%;
+            p {
+                color: $color-3;
+            }
+        }
+}

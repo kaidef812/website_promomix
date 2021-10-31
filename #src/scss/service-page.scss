@@ -1,0 +1,88 @@
+.service-page-block {
+    width: 100%;
+}
+.service-page {
+    display: flex;
+    flex-direction: column;
+
+		&__header {
+            margin-bottom: 145px;
+        }
+
+		&__body {
+        }
+
+		&__service-horizontal {
+            margin-bottom: 200px;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                margin-left: 60px;
+            }
+        }
+
+		&__name {
+            margin-bottom: 60px;
+
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 37px;
+            line-height: 120%;
+
+            width: 50%;
+        }
+
+		&__description {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+		&__image {}
+
+		&__service-vertical {
+            margin-bottom: 200px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+		&__images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 80px 0px 100px 0px;
+        }
+
+		&__cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+
+		&__header {
+            margin-bottom: 20px;
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+        }
+
+		&__description {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+        }
+}

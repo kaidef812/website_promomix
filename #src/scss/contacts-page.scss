@@ -1,0 +1,45 @@
+.contacts-block {
+    width: 100%;
+}
+.contacts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+
+		&__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+		&__header {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 120%;
+            margin-bottom: 85px;
+        }
+
+		&__info {
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            
+            div {
+                margin-bottom: 20px;
+            }
+        }
+
+		&__address {}
+
+		&__number {}
+
+		&__work-time {}
+
+		&__email {}
+
+		&__map {}
+}

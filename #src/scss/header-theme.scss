@@ -1,0 +1,41 @@
+.header-theme-block {
+    width: 100%;
+    margin-top: 100px;
+}
+.header-theme {
+    display: flex;
+    flex-direction: column;
+
+		&__tagline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+		&__header {
+            font-family: 'TTNorms-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 45px;
+            line-height: 120%;
+        }
+
+		&__sub-header {
+            width: 50%;
+            font-family: 'TTNorms-Regular';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 140%;
+        }
+
+		&__image {
+            margin-top: 135px;
+            position: absolute;
+        }
+
+		&__advantages {
+            margin-top: 450px;
+            padding: 485px 0px 150px 0px;
+            position: relative;
+        }
+}
