@@ -39,7 +39,7 @@ body {
     margin: 0 auto;
 
     @include laptop{
-        width: calc(100% - 150px);
+        width: calc(100% - 100px);
     }
 }
 
@@ -94,13 +94,16 @@ body {
 
 .navigation-menu {
     width: max-content;
+    @include mobile-m {
+        width: 100%;
+    }
 
     &__list {}
 
     &__item {
         padding: 9px 0px;
     }
-
+    
     &__link {
         font-family: 'TTNorms-Regular';
         font-style: normal;
@@ -122,7 +125,7 @@ body {
     &__list {}
 
     &__item {
-        display: inline;
+        display: inline-flex;
     }
 
     &__link {
@@ -134,10 +137,49 @@ body {
         padding: 0px 16px;
         transition: color 0.15s;
     }
+
+    &__link-text {
+        color: $color-1;
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    @include mobile-l {
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__link {
+            padding: 8px;
+        }
+        &__link-text {
+            display: none;
+        }
+
+        &__logo {
+            display: inherit;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    @include mobile-m {
+        &__logo {
+            width: 26px;
+            height: 26px;
+        }
+    }
 }
 
 .header-section {
     margin: 100px 0px;
+
+    @include mobile-l {
+        margin: 50px 0;
+    }
     
     &__sub-header {
         font-family: 'TTNorms-Regular';
@@ -152,6 +194,10 @@ body {
         p {
             color: $color-3;
         }
+
+        @include mobile-l {
+            font-size: 12px;
+        }
     }
     
     &__header {
@@ -161,18 +207,49 @@ body {
         font-weight: 500;
         font-size: 37px;
         line-height: 120%;
+        @include mobile-l {
+            width: 100%;
+            font-size: 28px;
+        }
     }
 }
 
 .header-horizontal {
     display: flex;
     justify-content: space-between;
+
+    @include mobile-l {
+        flex-direction: column;
+
+        &__header {
+            font-size: 38px;
+            margin-bottom: 30px;
+        }
+
+        &__sub-header {
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+
         &__header {
             font-family: 'TTNorms-Medium';
             font-style: normal;
             font-weight: 500;
             font-size: 45px;
             line-height: 120%;
+
+            @include mobile-l {
+                font-size: 30px;
+            }
+
+            @include mobile-m {
+                font-size: 26px;
+            }
+
+            @include mobile-s {
+                font-size: 22px;
+            }
         }
         
         &__sub-header {
@@ -182,6 +259,10 @@ body {
             font-weight: 400;
             font-size: 20px;
             line-height: 140%;
+
+            @include mobile-l {
+                font-size: 16px;
+            }
         }
 }
 

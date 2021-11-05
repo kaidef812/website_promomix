@@ -57,15 +57,26 @@
             transition: transform 124ms linear;
             height: min-content;
             
+            @include mobile-l {
+                margin: 10px 0 20px 0;
+            }
         }
         
 		&__image {
             opacity: 1;
             transition: opacity 124ms linear;
+
+            @include mobile-l {
+                width: 100%;
+            }
         }
 
 		&__description {
             margin-left: 60px;
+
+            @include mobile-l {
+                margin: 0;
+            }
         }
 
 		&__date {

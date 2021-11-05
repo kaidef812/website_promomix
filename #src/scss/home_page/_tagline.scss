@@ -12,13 +12,20 @@
             margin-left: 100px;
             padding-right: 100px;
         }
+
     }
 }
 .tagline {
     padding: 30% 0px 50px 0px;
     display: flex;
     justify-content: space-between;
-
+ 
+    @include mobile-l {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    
     &__text {
         width: 60%;
         p {
@@ -29,13 +36,46 @@
             line-height: 120%;
             color: $color-5;
         }
+
+        @include tablet {
+            width: 50%;
+            p {
+                font-size: 32px;
+            }
+        }
+
+        @include mobile-l {
+            width: 100%;
+
+            p {
+                font-size: 28px;
+            }
+        }
+
+        @include mobile-s {
+            p{
+                font-size: 20px;
+            }
+        }
     }
 
     &__social-links {
         display: flex;
         flex-direction: column-reverse;
+        
+        .social-links {
+            &__link-text{
+                color: $color-5;
+            }
+            &__logo {
+                fill: $color-5 !important;
+            }
+        }
+        
+        @include mobile-l{
+            margin-top: 10px;
+        }
     }
-
 }
 
 #tagline__list li {

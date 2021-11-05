@@ -8,6 +8,7 @@
     z-index: 999;
     position: relative;
     align-items: center;
+
 		&__logo {
             a svg path {
                 transition: fill 0.3s;
@@ -30,9 +31,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            @include laptop {
-            }
         }
 
 		&__contact-number {
@@ -42,6 +40,10 @@
             font-size: 15px;
             line-height: 100%;
             margin-right: 100px;
+
+            @include mobile-l {
+                display: none;
+            }
         }
 
 		&__leave-request {}
@@ -64,7 +66,10 @@
 
     @include laptop {
         left: 25px;
-        right: 25px;
+    }
+
+    @include mobile-l {
+        left: 10px;
     }
 }
 
@@ -75,7 +80,6 @@
 {
     left: 0;
     position: absolute;
-    height: 15%;
     width: 100%;
     transition: all 0.3s ease 0s;
     background-color: $color-1;
@@ -83,6 +87,7 @@
 
 .header__burger-menu span {
     width: 60%;
+    height: 2px;
 }
 
 .header__burger-menu::after {
@@ -93,6 +98,7 @@
 .header__burger-menu::after
 {
     content: "";
+    height: 2px;
 }
 .header__burger-menu::before
 {
@@ -145,6 +151,11 @@
         left: -100%;
         transition: left 0.7s;
         margin: 0 auto;
+        border-bottom: 1px solid $color-1;
+
+        @include mobile-l {
+            
+        }
     }
 
     &__burger-list._active {

@@ -1,12 +1,17 @@
 .entrust-advertising-block {
     width: 100%;
     margin: 200px 0px;
+
+    @include mobile-l {
+        margin: 100px 0;
+    }
 }
 .entrust-advertising {
     display: flex;
     flex-direction: column;
 
-		&__header {}
+		&__header {
+        }
 
 		&__sub-header {
             font-family: 'TTNorms-Regular';
@@ -28,32 +33,73 @@
             font-weight: 500;
             font-size: 27px;
             line-height: 140%;
+
+            @include mobile-l {
+                font-size: 22px;
+            }
+
+            @include mobile-s {
+                font-size: 18px;
+            }
         }
 
 		&__video {
             margin: 200px auto 0px auto;
             overflow: hidden;
+
+            @include laptop {
+                width: 100%;
+            }
+
+            @include mobile-l {
+                margin-top: 50px;
+                height: 200px;
+            }
+
+            @include mobile-s {
+                height: 150px;
+            }
         }
 }
 
 .history-block {
     width: 100%;
     margin: 200px 0px;
+
+    @include mobile-l {
+        margin: 100px 0;
+    }
 }
 .history {
     padding: 190px 0px 500px 0px;
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    @include mobile-l {
+        padding: 0;
+        flex-direction: column;
+    }
 		&__header {
             width: 45%;
             p {
                 width: 45%;
             }
+
+            @include mobile-l {
+                width: 100%;
+                p {
+                    width: 100%;
+                }
+            }
         }
 
 		&__years-list {
             width: 60%;
+
+            @include mobile-l {
+                width: 100%;
+            }
         }
         
 		&__year {
@@ -66,6 +112,14 @@
             margin-right: 60px;
             position: relative;
             right: 30px;
+
+            @include mobile-l {
+                right: 0;
+            }
+
+            @include mobile-s {
+                margin-right: 10px;
+            }
         }
 
         &__text {}
@@ -95,19 +149,14 @@
 		&__image {
             position: relative;
             margin-top: -360px;
+            @include laptop {
+                img {
+                    width: 100%;
+                }
+            }
+
+            @include mobile-l{
+                display: none;
+            }
         }
-}
-
-.equipment-block {
-    width: 100%;
-}
-.equipment {
-    display: flex;
-    flex-direction: column;
-
-		&__header {
-            margin-bottom: 100px;
-        }
-
-		&__list {}
 }

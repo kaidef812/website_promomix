@@ -4,7 +4,7 @@
 .service-subservices {
     display: flex;
 	flex-direction: column;
-	
+
 		&__header {}
 		
 		&__cards {
@@ -18,9 +18,20 @@
 		
 		&__card {
 			margin-bottom: 60px;
+
+			@include mobile-s {
+				width: 100%;
+			}
 		}
 
-		&__logo {}
+		&__logo {
+			@include mobile-s {
+				img {
+					width: 100%;
+
+				}
+			}
+		}
 
 		&__name {
 			margin-top: 20px;
@@ -42,9 +53,18 @@
 	transition: background-color 0.15s;
 	padding: 60px;
 	align-items: center;
+
+	@include mobile-s {
+		padding: 5px;
+		margin-top: 50px;
+	}
+
+	@include mobile-l {
+		flex-direction: column;
+	}
 	
-	&__type {
-		p {
+		&__type {
+			p {
 				transition: color 0.15s;
 				font-family: 'TTNorms-Regular';
 				font-style: normal;
@@ -66,6 +86,16 @@
 				font-weight: 500;
 				font-size: 25px;
 				line-height: 130%;
+			}
+
+			@include mobile-l {
+				width: 100%;
+				align-items: center;
+				margin-top: 20px;
+
+				p {
+					font-size: 18px;
+				}
 			}
 		}
 

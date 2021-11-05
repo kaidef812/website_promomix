@@ -7,6 +7,10 @@
     justify-content: space-between;
     margin-top: 100px;
 
+    @include tablet {
+        flex-direction: column;
+    }
+
 		&__text {
             display: flex;
             flex-direction: column;
@@ -41,5 +45,24 @@
 
 		&__email {}
 
-		&__map {}
+		&__map {
+            @include laptop {
+                iframe {
+                    width: 600px;
+                    height: 400px;
+                }
+            }
+
+            @include tablet {
+                iframe {
+                    width: 100%;
+                }
+            }
+            
+            @include mobile-l {
+                iframe {
+                    height: 200px;
+                }
+            }
+        }
 }

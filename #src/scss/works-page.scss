@@ -4,6 +4,10 @@
 
 		&__header {
             margin: 100px 0px 100px 0px;
+
+            @include mobile-l {
+                margin: 50px 0;
+            }
         }
 
 		&__cards {}
@@ -12,6 +16,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include laptop {
+        justify-content: space-around;
+    }
 
     p {
         transition: color 0.15s;
@@ -31,10 +39,18 @@
                     color: $color-6;
                 }
             }
+
+            @include mobile-l {
+                width: 100%;
+            }
         }
 
         &__wide-card {
             margin: 100px 0px;
+
+            @include mobile-l {
+                margin: 0;
+            }
         }
 
 		&__image {
@@ -44,6 +60,12 @@
             img {
                 opacity: 1;
                 transition: opacity 124ms linear, transform 124ms linear;
+            }
+
+            @include mobile-l {
+                img {
+                    width: 100%;
+                }
             }
         }
 

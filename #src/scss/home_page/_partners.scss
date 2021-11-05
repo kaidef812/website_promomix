@@ -6,6 +6,10 @@
     padding: 175px 0px;
     flex-wrap: wrap;
 
+    @include mobile-l {
+        padding: 0px 0px 100px 0px;
+    }
+
 		&__header{
             @include laptop {
                 width: 30%;
@@ -31,6 +35,7 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
 
 		&__icon {
@@ -39,4 +44,13 @@
 		&__image {
             padding: 40px 50px;
         }
+
+    @include mobile-l {
+        flex-direction: column;
+
+        &__header, &__icons {
+            width: 100%;
+        }
+
+    }
 }
